@@ -1,5 +1,5 @@
 package com.rizvi.spring.model;
 
-public class Vet {
+public class Vet extends Person{
 
 }

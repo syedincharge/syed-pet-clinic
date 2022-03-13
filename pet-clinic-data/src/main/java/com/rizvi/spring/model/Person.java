@@ -1,7 +1,5 @@
 package com.rizvi.spring.model;
 
-import javax.persistence.Column;
-
 public class Person {
 
    // @Column(name = "first_name")
@@ -11,10 +9,10 @@ public class Person {
     private String lastName;
 
 
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+//    public Person(String firstName, String lastName) {
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//    }
 
     public String getFirstName() {
         return firstName;
