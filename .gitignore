@@ -1,0 +1,85 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+## Maven
+/log/
+/target/
+
+## Package Files
+*.jar
+*.war
+*.ear
+*.db
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+*.ids
+*.orig
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Windows  ###
+Thumbs.db
+# Folder config file
+Desktop.ini
+
+# Directories
+/bin/
+/deploy/
+
+#logs
+*.log
+
+#Others
+*.class
+*.*~
+*~
+.merge_file
+
+
+
+
+### Gradle Wrapper  ###
+!gradle/wrapper/gradle-wrapper.jar
+
+### Node
+/node/
+node_tmp/
+node_modules/
+npm-debig.log.*
+
+###  SASS  ###
+.sass-cache/
+
+## Project Specific ##
+/build/www/**
+/src/test/javacript/coverage/
+/src/test/jacscript/PhantomJS*/
+
+
