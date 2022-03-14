@@ -1,6 +1,6 @@
 package com.rizvi.spring.model;
 
-public class Person {
+public class Person extends BaseEntity{
 
    // @Column(name = "first_name")
     private String firstName;
