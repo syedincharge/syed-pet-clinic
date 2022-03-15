@@ -1,4 +1,4 @@
-package com.rizvi.web.controllers;
+package com.rizvi.spring.controllers;
 
 
 import org.springframework.stereotype.Controller;
