@@ -2,10 +2,11 @@ package com.rizvi.spring.services.map;
 
 import com.rizvi.spring.model.Pet;
 import com.rizvi.spring.services.CrudService;
+import com.rizvi.spring.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 
     @Override

@@ -2,10 +2,11 @@ package com.rizvi.spring.services.map;
 
 import com.rizvi.spring.model.Vet;
 import com.rizvi.spring.services.CrudService;
+import com.rizvi.spring.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
