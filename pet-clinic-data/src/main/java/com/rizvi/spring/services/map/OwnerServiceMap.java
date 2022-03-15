@@ -3,9 +3,12 @@ package com.rizvi.spring.services.map;
 import com.rizvi.spring.model.Owner;
 import com.rizvi.spring.services.CrudService;
 import com.rizvi.spring.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

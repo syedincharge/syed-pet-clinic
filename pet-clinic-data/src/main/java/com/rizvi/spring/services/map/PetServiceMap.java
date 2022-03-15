@@ -3,9 +3,11 @@ package com.rizvi.spring.services.map;
 import com.rizvi.spring.model.Pet;
 import com.rizvi.spring.services.CrudService;
 import com.rizvi.spring.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 

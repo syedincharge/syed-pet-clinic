@@ -3,9 +3,11 @@ package com.rizvi.spring.services.map;
 import com.rizvi.spring.model.Vet;
 import com.rizvi.spring.services.CrudService;
 import com.rizvi.spring.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
