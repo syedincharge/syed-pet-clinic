@@ -9,6 +9,7 @@ public class IndexController {
 
     @RequestMapping({"","index", "index.html"})
     public String index(){
+        System.out.println("some message for spring....1234");
         return "index";
     }
 }
