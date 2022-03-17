@@ -1,6 +1,7 @@
 package com.rizvi.spring.bootstrap;
 
 import com.rizvi.spring.model.Owner;
+import com.rizvi.spring.model.Pet;
 import com.rizvi.spring.model.PetType;
 import com.rizvi.spring.model.Vet;
 import com.rizvi.spring.services.OwnerService;
@@ -12,6 +13,7 @@ import javafx.scene.effect.PerspectiveTransform;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 
@@ -43,12 +45,34 @@ public class DataLoader implements CommandLineRunner {
         owner1.setId(1L);
         owner1.setFirstName("Micheal");
         owner1.setLastName("Weston");
+        owner1.setAddress("123 Brickerl Street");
+        owner1.setCity("Miami");
+        owner1.setTelephone("814-555-4252");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(saveDogType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+        owner1.getPets().add(mikesPet);
+
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setId(2L);
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
+        owner2.setAddress("4037 Elmhurst Street");
+        owner2.setCity("New York");
+        owner2.setTelephone("814-555-4252");
+
+        Pet fiaonaCat = new Pet();
+        fiaonaCat.setName("Persian cat");
+        fiaonaCat.setOwner(owner2);
+        fiaonaCat.setBirthDate(LocalDate.now());
+        fiaonaCat.setPetType(saveCatType);
+        owner2.getPets().add(fiaonaCat);
+
         ownerService.save(owner2);
 
         System.out.println("Loaded Owners ....");
