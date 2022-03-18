@@ -2,6 +2,7 @@ package com.rizvi.spring.model;
 
 import java.time.LocalDate;
 
+
 public class Visit extends BaseEntity {
 
 
