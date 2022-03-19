@@ -33,7 +33,6 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
         return super.findById(id);
     }
 
-
     @Override
     public Owner save(Owner owner) {
         if(owner != null) {
@@ -79,7 +78,8 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                 .findFirst()
                 .orElse(null);
     }
-    //@Override
+
+    @Override
     public List<Owner> findAllByLastNameLike(String lastName) {
 
         //todo - impl

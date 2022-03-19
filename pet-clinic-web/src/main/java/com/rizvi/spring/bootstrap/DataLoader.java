@@ -8,7 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
-import java.util.Set;
+
 
 
 @Component
@@ -99,8 +99,6 @@ public class DataLoader implements CommandLineRunner {
         catVisit.setDescription("Sneezy Kitty");
 
         visitService.save(catVisit);
-
-        System.out.println("Loaded Owners");
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
