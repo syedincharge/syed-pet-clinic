@@ -1,7 +1,6 @@
 package com.rizvi.spring.services.map;
 
 import com.rizvi.spring.model.Pet;
-import com.rizvi.spring.services.CrudService;
 import com.rizvi.spring.services.PetService;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +27,7 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
 
     @Override
     public Pet save(Pet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
