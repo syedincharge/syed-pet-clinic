@@ -2,6 +2,7 @@ package com.rizvi.spring.bootstrap;
 
 import com.rizvi.spring.model.*;
 import com.rizvi.spring.services.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -98,6 +99,8 @@ public class DataLoader implements CommandLineRunner {
         catVisit.setDescription("Sneezy Kitty");
 
         visitService.save(catVisit);
+
+        System.out.println("Loaded Owners");
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
