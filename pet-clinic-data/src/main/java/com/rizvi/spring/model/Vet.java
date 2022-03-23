@@ -1,10 +1,16 @@
 package com.rizvi.spring.model;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "vets")
 public class Vet extends Person{
@@ -17,15 +23,18 @@ public class Vet extends Person{
         super();
     }
 
-    public Vet() {
-        super();
-    }
+//    public Vet() {
+//
+//        super();
+//    }
 
-    public Set<Speciality> getSpecialities() {
-        return specialities;
-    }
-
-    public void setSpeciality(Set<Speciality> specialities) {
-        this.specialities = specialities;
-    }
+//    public Set<Speciality> getSpecialities() {
+//
+//        return specialities;
+//    }
+//
+//    public void setSpeciality(Set<Speciality> specialities) {
+//
+//        this.specialities = specialities;
+//    }
 }

@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 
-@RequestMapping("/owners")
+@RequestMapping({"/owners", "/owners/index", "/owners/ownersList.html", "owners.html"})
 @Controller
 public class OwnerController {
     private static final String VIEW_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
@@ -42,7 +42,7 @@ public class OwnerController {
 
 
     @GetMapping
-    public String proecssFindForm(Owner owner, BindingResult result, Model model) {
+    public String processFindForm(Owner owner, BindingResult result, Model model) {
         //allow parameterless GET request for /owners to return all records
         if(owner.getLastName() == null) {
             owner.setLastName("");
