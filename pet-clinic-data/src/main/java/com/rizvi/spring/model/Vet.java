@@ -28,13 +28,13 @@ public class Vet extends Person{
 //        super();
 //    }
 
-//    public Set<Speciality> getSpecialities() {
-//
-//        return specialities;
-//    }
-//
-//    public void setSpeciality(Set<Speciality> specialities) {
-//
-//        this.specialities = specialities;
-//    }
+    public Set<Speciality> getSpecialities() {
+
+        return specialities;
+    }
+
+    public void setSpeciality(Set<Speciality> specialities) {
+
+        this.specialities = specialities;
+    }
 }
