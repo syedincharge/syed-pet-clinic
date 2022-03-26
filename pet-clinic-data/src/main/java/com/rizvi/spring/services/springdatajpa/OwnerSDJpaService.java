@@ -50,12 +50,12 @@ public class OwnerSDJpaService implements OwnerService {
     @Override
     public Owner findById(Long aLong) {
         //ownerRepository.findById(aLong) is gonna return an Optional object, need get() to get the ID value
-        Optional<Owner> optionalOwner =  ownerRepository.findById(aLong);
-        return optionalOwner.orElse(null);//return ID val if present otherwise null
+        return  ownerRepository.findById(aLong).orElse(null);//return ID val if present otherwise null
     }
 
     @Override
     public Owner save(Owner object) {
+
         return ownerRepository.save(object);
     }
 
