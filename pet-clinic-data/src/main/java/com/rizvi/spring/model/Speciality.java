@@ -12,14 +12,7 @@ public class Speciality extends BaseEntity {
     @Column(name = "description")
     private String description;
 
-    public Speciality(Long id) {
 
-        super();
-    }
-
-    public Speciality() {
-
-    }
 
     public String getDescription() {
 

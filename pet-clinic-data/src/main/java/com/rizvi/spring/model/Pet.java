@@ -12,17 +12,6 @@ import java.util.Set;
 public class Pet extends BaseEntity {
 
 
-    public Pet(Long id, String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
-        super();
-        this.name = name;
-        this.petType = petType;
-        this.owner = owner;
-        this.birthDate = birthDate;
-        if(visits != null || visits.size() > 0) {
-            this.visits = visits;
-        }
-    }
-
     @Column(name = "name")
     private String name;
 
@@ -84,10 +73,12 @@ public class Pet extends BaseEntity {
     }
 
     public void setVisits(Set<Visit> visits) {
+
         this.visits = visits;
     }
 
     public boolean isNew() {
+
         return true;
     }
 }

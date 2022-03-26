@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 
-@RequestMapping({"/owners", "/owners/index", "/owners/ownersList.html", "owners.html"})
+@RequestMapping("/owners")
 @Controller
 public class OwnerController {
     private static final String VIEW_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
@@ -23,7 +23,14 @@ public class OwnerController {
 
     @Autowired
     public OwnerController(OwnerService ownerService) {
+
         this.ownerService = ownerService;
+    }
+    @RequestMapping({"","/","/index","/ownersList.html"})
+    public String listOwners(Model model){
+        model.addAttribute("owners", ownerService.findAll());
+
+        return "owners/index";
     }
 
 
@@ -36,7 +43,7 @@ public class OwnerController {
     @RequestMapping("/find")
     public String findOwners(Model model) {
 
-        model.addAttribute("owner", Owner.builder().build());
+        model.addAttribute("owners", ownerService.findAll());
         return "owners/findOwners";
     }
 
@@ -77,7 +84,7 @@ public class OwnerController {
 
     @GetMapping("/new")
     public String initCreationForm(Model model) {
-        model.addAttribute("owner", Owner.builder().build());
+        model.addAttribute("owner", ownerService.findAll());
         return VIEW_OWNER_CREATE_OR_UPDATE_FORM;
     }
 

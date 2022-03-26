@@ -25,8 +25,19 @@ public class BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //prefer boxed types to primitives(long) for hibernate, in that boxed types can be Null whereas primitive types cannot.
 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public boolean isNew() {
+
         return this.id == null;
     }
-    
+
+
 }

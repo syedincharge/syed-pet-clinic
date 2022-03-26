@@ -9,25 +9,15 @@ import javax.persistence.Table;
 @Table(name = "types")
 public class PetType extends BaseEntity {
 
+        @Column(name = "name")
+        private String name;
 
-    public PetType(Long id, String name) {
-        super();
-        this.name = name;
-    }
-
-    @Column(name = "name")
-    private String name;
-
-    public PetType() {
-
-    }
-
-    public String getName() {
+        public String getName() {
 
         return name;
     }
 
-    public void setName(String name) {
+       public void setName(String name) {
 
         this.name = name;
     }
