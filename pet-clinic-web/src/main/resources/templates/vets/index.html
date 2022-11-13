@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th ="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'vets')}">
-<head>
-    <meta charset="UTF-8">
-    <title>List of Vets</title>
-</head>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body},'vets')}">
+
 <body>
-        <!--/*@thymeVar  id="vet" type="com.rizvi.spring.model.Vet"*/-->
 
-       <h2 th:text="'List of Vets'">List of Vets...</h2>
+<h2 th:text="List of vets">List of Vets</h2>
 
-        <table  class="table table-striped">
-      <thead>
-      <tr>
-          <th>ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr th:each="vet : ${vets}">
-          <td th:text="${vet.id}">1</td>
-          <td th:text="${vet.firstName}">Joe</td>
-          <td th:text="${vet.lastName}">Buck</td>
-      </tr>
-      </tbody>
-  </table>
-
+<table id="vets" class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 150px;">Name</th>
+        <th style="width: 200px;">Specialities</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vet : ${vets}">
+    <tr>
+        <td th:text="${vet.id}">1</td>
+        <td th:text="${vet.firstName}">joe</td>
+        <td th:text="${vet.lastName} ">Buck</td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
